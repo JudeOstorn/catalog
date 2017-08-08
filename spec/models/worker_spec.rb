@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe Worker, :type => :model do
   it "it validates full_name and birthdate is not empty" do
