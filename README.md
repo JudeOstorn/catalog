@@ -1,6 +1,6 @@
 # README
 
-Soon heroku app
+https://catalog-press.herokuapp.com/   # <= Heroku app for testing and viewing
 
 # Configuration #
 
