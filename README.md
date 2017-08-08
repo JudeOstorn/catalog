@@ -8,10 +8,7 @@ this start version "README"  in the latest version it's being upgraded
 
 * Rails **5.0.5**
 
-* uses **Postgresql**  (*do not forget to install the database*
-```
-
- )
+* uses **Postgresql**  (*do not forget to install the database* )
 
 ## Deployment instructions ##
 -
