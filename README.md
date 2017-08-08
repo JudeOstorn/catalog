@@ -1,6 +1,6 @@
 # README
 
-this start version "README"  in the latest version it's being upgraded
+Soon heroku app
 
 # Configuration #
 
@@ -13,42 +13,23 @@ this start version "README"  in the latest version it's being upgraded
 ## Deployment instructions ##
 -
 ```
-#!git
-
-git clone git@bitbucket.org:Jude_Ostorn/move_object_tech_di.git
+git clone https://github.com/JudeOstorn/catalog.git
 ```
--
 ```
-#!ruby
-
-cd move_object_tech_di
+cd catalog
 ```
-
--
 ```
-#!ruby
-
 bundle install
 ```
 ```
-#!ruby
-
 rails db:create
 ```
 ```
-#!ruby
-
 rails db:migrate
 ```
 ```
-#!ruby
-
 rails db:seed
 ```
-
--
 ```
-#!ruby
-
 rails server
 ```
