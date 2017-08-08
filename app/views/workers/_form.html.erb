@@ -1,0 +1,49 @@
+<%= form_for(worker) do |f| %>
+  <% if worker.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(worker.errors.count, "error") %> prohibited this worker from being saved:</h2>
+
+      <ul>
+      <% worker.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :patronymic %>
+    <%= f.text_field :patronymic_name %>
+  </div>
+
+  <div class="field">
+    <%= label_tag 'День рождения' %>
+    <%= f.date_select :birthdate,
+                                { :order => [:day, :month, :year],
+                                  :start_year => 2018,
+                                  :end_year => 1910,
+                                  :with_css_classes => true
+                                }%>
+    <%#=f.date_field :birthdate%>
+  </div>
+
+
+  <div class="field">
+    <%= label_tag 'Должность:' %>
+    <%= f.select 'position_id', Position.order(:id).collect {|p| [ p.title, p.id ] } %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

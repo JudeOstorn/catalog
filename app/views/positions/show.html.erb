@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+
+  <strong>Title:</strong>
+  <%= @position.title %>
+
+
+    <% @position.worker.each do |worker| %>
+        <br>
+        <%= label_tag "ФИО: #{worker.full_name}" %>
+            <b><%= label_tag " (#{worker.position.title})"%></b>
+        <%= link_to 'Show', worker %>
+        <%= link_to 'Edit', edit_worker_path(worker) %>
+        <%= link_to 'Destroy', worker, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+
+<br>
+<br>
+<%= link_to 'Edit', edit_position_path(@position) %> |
+<%= link_to 'Back', positions_path %>

@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ФИО:</strong>
+  <%= @worker.full_name %>
+</p>
+<p>
+  <strong>Должность:</strong>
+  <%= label_tag @worker.birthdate.strftime('%B %e %Y') %>
+</p>
+<p>
+  <strong>Должность:</strong>
+  <%= link_to "#{@worker.position.title}", position_path(@worker.position) %>
+</p>
+
+
+<%= link_to 'Edit', edit_worker_path(@worker) %> |
+<%= link_to 'Back', workers_path %>
