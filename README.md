@@ -1,24 +1,62 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+this start version "README"  in the latest version it's being upgraded
 
-Things you may want to cover:
+# Configuration #
 
-* Ruby version
+* ruby **2.3.0p0**
 
-* System dependencies
+* Rails **5.0.5**
 
-* Configuration
+* uses **Postgresql**  (*do not forget to install the database*
+```
 
-* Database creation
+ )
 
-* Database initialization
+## Deployment instructions ##
+-
+```
+#!git
 
-* How to run the test suite
+git clone git@bitbucket.org:Jude_Ostorn/move_object_tech_di.git
+```
+-
+```
+#!ruby
 
-* Services (job queues, cache servers, search engines, etc.)
+cd move_object_tech_di
+```
 
-* Deployment instructions
+-
+```
+#!ruby
 
-* ...
+bundle install
+```
+
+#!ruby
+
+rails db:create
+```
+#!ruby
+
+rails db:migrate
+```
+#!ruby
+
+rails db:seed
+```
+
+-
+```
+#!ruby
+
+rails server
+```
+
+
+
+
+
+
+### Why i wrote this???? ###
