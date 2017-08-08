@@ -30,14 +30,16 @@ cd move_object_tech_di
 
 bundle install
 ```
-
+```
 #!ruby
 
 rails db:create
 ```
+```
 #!ruby
 
 rails db:migrate
+```
 ```
 #!ruby
 
@@ -50,10 +52,3 @@ rails db:seed
 
 rails server
 ```
-
-
-
-
-
-
-### Why i wrote this???? ###
