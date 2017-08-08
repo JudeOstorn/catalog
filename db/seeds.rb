@@ -1,7 +1,40 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Position.create([
+                     { title: 'Development'},
+                     { title: 'Team Lead'},
+                     { title: 'Manager'},
+                     { title: 'Creator'},
+                     { title: 'Testman'},
+                     { title: 'shower'},
+                     { title: 'bloger'},
+                     { title: 'technic'},
+                     { title: 'super-man'},
+                     { title: 'electro-man'},
+                     { title: 'Bat-man'},
+                     { title: 'Admin'},
+                     { title: 'Anykey'},
+                     { title: 'Wizard'},
+                     { title: 'Frontend Development'},
+                     { title: 'Backend Development'},
+                     { title: 'Musical-man'},
+                     { title: 'Dev-Ops'},
+                     { title: 'Operator'},
+                     { title: 'content-manager'},
+                     { title: 'God'},
+                     { title: 'Angel'}])
+Worker.create([
+                     { first_name: 'Коля', last_name: 'Коля', patronymic_name: 'вфпфвыафыв', position_id: 1, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Надя', last_name: 'Надя', patronymic_name: 'фыафывафываф', position_id: 1, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Вася', last_name: 'рпавы', patronymic_name: 'фывафывафыва', position_id: 1, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Лена', last_name: 'правы', patronymic_name: 'фыафывафывафыв', position_id: 15, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Гриша', last_name: 'парвы', patronymic_name: 'фывафывафыв', position_id: 15, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Настя', last_name: 'павы', patronymic_name: 'чсмичсмичс', position_id: 15, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Ира', last_name: 'павы', patronymic_name: 'квпеукыпв', position_id: 1, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Витя', last_name: 'павы', patronymic_name: 'мвасчимсмчиява', position_id: 1, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Макс', last_name: 'фывафы', patronymic_name: 'фвпкуывап', position_id: 1, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Даша', last_name: 'иекцв', patronymic_name: 'ываирпавыы', position_id: 1, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Брюс', last_name: 'Уейн', patronymic_name: 'безотцовщина', position_id: 11, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Адольф', last_name: 'Не гитлер', patronymic_name: 'Адикович', position_id: 14, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Ноунейм', last_name: 'ноунеймов', patronymic_name: 'ноунеймоич', position_id: 13, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Мишель', last_name: 'бла-бла', patronymic_name: 'этонадосидпрописывать-_-', position_id: 3, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Натали', last_name: 'Портман', patronymic_name: 'выапитро', position_id: 1, birthdate:"1995-03-28 00:00:00"},
+                     { first_name: 'Сталин', last_name: 'Сталин', patronymic_name: 'Сталин', position_id: 2, birthdate:"1995-03-28 00:00:00"}])
