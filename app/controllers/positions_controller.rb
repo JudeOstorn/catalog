@@ -1,12 +1,12 @@
 class PositionsController < ApplicationController
   before_action :set_position, only: [:show, :edit, :update, :destroy]
 
-
   def index
     @positions = Position.paginate(page: params[:page], per_page: 10)
   end
 
   def show
+    no_secret_action
   end
 
   def new
@@ -42,6 +42,7 @@ class PositionsController < ApplicationController
     @position.destroy
     respond_to do |format|
       format.html { redirect_to positions_url, notice: 'Position was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 
@@ -52,5 +53,13 @@ class PositionsController < ApplicationController
 
     def position_params
       params.require(:position).permit(:title)
+    end
+
+    def no_secret_action
+      if @position.title.downcase == "god"
+        render file: "#{Rails.root}/public/404.html", layout: false, status: 404
+      elsif @position.title.downcase == "batman"
+        render file: "#{Rails.root}/public/500.html", layout: false, status: 500
+      end
     end
 end

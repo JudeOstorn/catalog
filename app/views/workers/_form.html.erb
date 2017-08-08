@@ -12,17 +12,17 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first_name %>
+    <%= label_tag 'Имя' %>
     <%= f.text_field :first_name %>
   </div>
 
   <div class="field">
-    <%= f.label :last_name %>
+    <%= label_tag 'Фамилия' %>
     <%= f.text_field :last_name %>
   </div>
 
   <div class="field">
-    <%= f.label :patronymic %>
+    <%= label_tag 'Отчество' %>
     <%= f.text_field :patronymic_name %>
   </div>
 
@@ -31,8 +31,7 @@
     <%= f.date_select :birthdate,
                                 { :order => [:day, :month, :year],
                                   :start_year => 2018,
-                                  :end_year => 1910,
-                                  :with_css_classes => true
+                                  :end_year => 1910
                                 }%>
     <%#=f.date_field :birthdate%>
   </div>

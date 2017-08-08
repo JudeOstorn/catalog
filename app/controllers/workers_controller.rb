@@ -6,6 +6,7 @@ class WorkersController < ApplicationController
   end
 
   def show
+    no_secret_action
   end
 
   def new
@@ -41,6 +42,7 @@ class WorkersController < ApplicationController
     @worker.destroy
     respond_to do |format|
       format.html { redirect_to workers_url, notice: 'Worker was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 
@@ -51,5 +53,13 @@ class WorkersController < ApplicationController
 
     def worker_params
       params.require(:worker).permit(:first_name, :last_name, :patronymic_name, :position_id, :birthdate)
+    end
+
+    def no_secret_action
+      if @worker.position.title.downcase == "god"
+        render file: "#{Rails.root}/public/404.html", layout: false, status: 404
+      elsif @worker.position.title.downcase == "batman"
+        render file: "#{Rails.root}/public/500.html", layout: false, status: 500
+      end
     end
 end

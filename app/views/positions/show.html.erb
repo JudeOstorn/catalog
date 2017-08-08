@@ -8,7 +8,7 @@
     <% @position.worker.each do |worker| %>
         <br>
         <%= label_tag "ФИО: #{worker.full_name}" %>
-            <b><%= label_tag " (#{worker.position.title})"%></b>
+        <b><%= label_tag " (#{worker.position.title})"%></b>
         <%= link_to 'Show', worker %>
         <%= link_to 'Edit', edit_worker_path(worker) %>
         <%= link_to 'Destroy', worker, method: :delete, data: { confirm: 'Are you sure?' } %>
